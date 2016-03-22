@@ -1,0 +1,66 @@
+@import "compass/css3";
+
+@import "susy";
+$susy: (
+  columns: 12,
+  gutters: 1/6,
+  gutter-position: split,
+  global-box-sizing: border-box,
+  debug: (
+    // image: show
+  ),
+  // flow: rtl
+);
+
+@import "general/clear";
+@import "general/rwd";
+@import "general/sprites";
+@import "general/awesomeFont";
+
+@import "components/form";
+@import "components/container";
+@import "components/graph";
+
+
+/* =================== Adjustment =================== */
+
+%vl-container:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+%vl-element {
+	display: inline-block;
+	vertical-align: middle;
+}
+%vl-element-b {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.clearfix {
+	@include clearfix();
+}
+
+.al-r { text-align: right; }
+.al-c { text-align: center; }
+
+.fl-r { float: right; }
+.fl-l { float: left; }
+
+/* =================== Scrollbar =================== */
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+::-webkit-scrollbar-track {
+	background-color: rgba(200, 200, 200, 0.7);
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(128,128,128, 0.7);
+	@include border-radius(3px);
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(92,183,196, 0.7);
+}

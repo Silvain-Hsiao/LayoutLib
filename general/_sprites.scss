@@ -1,0 +1,18 @@
+@import "compass/utilities/sprites";
+$icon-spacing: 10px;
+$icon-layout: horizontal;
+@import "icons/*.png";
+@include all-icons-sprites;
+
+
+.icons-tw {
+  display: inline-block;
+  width: image-width('../images/icons/tw.png');
+  height: image-height('../images/icons/tw.png');
+}
+
+.icons-us {
+  display: inline-block;
+  width: image-width('../images/icons/us.png');
+  height: image-height('../images/icons/us.png');
+}

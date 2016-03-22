@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "FontAwesome";
+  src: url("fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 100%/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* company info */
+.fa-home:before     { content: "\f015"; }
+.fa-mobile:before   { content: "\f10b"; }
+.fa-phone:before    { content: "\f095"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-bars:before     { content: "\f0c9"; }
+.fa-map-marker:before { content: "\f041"; }
+
+
+/* user interaction */
+.fa-download:before { content: "\f019"; }
+.fa-search:before  { content: "\f002"; }
+.fa-chavron:before { content: "\f054"; }
+.fa-close:before { content: "\f00d"; }
+
+/* direction, arrows */
+.fa-angle-left:before { content: "\f104"; }
+.fa-angle-right:before { content: "\f105"; }
+.fa-angle-down:before { content: "\f107"; }
+.fa-angle-double-left:before { content: "\f100"; }
+.fa-angle-double-right:before { content: "\f101"; }
+
+
+/* social icons */
+.fa-facebook:before { content: "\f082"; }
+.fa-youtube:before  { content: "\f167"; }
+.fa-twitter:before  { content: "\f081"; }

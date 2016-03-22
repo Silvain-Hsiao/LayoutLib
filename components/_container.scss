@@ -1,0 +1,47 @@
+@mixin clearfix() {
+  *zoom: 1;
+  &:before { content: ""; display: table; }
+  &:after  { content: ""; display: table; clear:both; }
+}
+
+
+
+@mixin magnifier($w, $h, $scale:"1.1", $index:"2") {
+
+  width: $w;
+  height: $h;
+  line-height: 0;
+  overflow: hidden;
+
+  img {
+    @include transform(scale(1));
+    @include transition(transform 0.2s ease-out);
+    z-index: $index;
+  }
+
+  &:hover img {
+    @include transform(scale($scale));
+    @include transition(transform 0.2s ease-out);
+  }
+
+}
+
+
+@mixin mask($color) {
+  position: relative;
+  .mask {
+    @extend %vl-container;
+    position: absolute;
+    overflow: hidden;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    @include background-image(linear-gradient(134deg, rgb(251, 60, 43) 14%, rgb(252, 123, 111) 74%));
+    @include opacity(0);
+    @include transition(opacity 0.4s ease-out);
+  }
+  &:hover .mask {
+    color: $color;
+    @include opacity(0.9);
+    @include transition(opacity 0.4s ease-out);
+  }
+}

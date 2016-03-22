@@ -1,0 +1,85 @@
+@mixin banner($color, $bgc) {
+  /* 背景填滿的標題列 */
+  background-color: $bgc;
+  color: $color;
+}
+
+@mixin radio($size, $img-url) {
+  /* 自訂 radio 按鈕 */
+  position: absolute;
+  left: -999em;
+
+  & + label {
+    cursor: pointer;
+  }
+  & + label:before {
+    content: '';
+    position: relative;
+    left: -2px;
+    top: 0.25em;
+    display: inline-block;
+    height: $size;
+    width: $size;
+    background-image: url($img-url);
+    background-position: 0 0 ;
+    background-repeat: no-repeat;
+    margin-right: 4px;
+  }
+  &:checked + label:before {
+    background-position: 0 -#{$size};
+  }
+}
+
+@mixin checkbox($size, $img-url) {
+  /* 自訂 checkbox 按鈕 */
+  position: absolute;
+  left: -999em;
+
+  & + label {
+    cursor: pointer;
+  }
+  & + label:before {
+    content: '';
+    position: relative;
+    left-: -2px;
+    top: 0.25em;
+    display: inline-block;
+    height: $size;
+    width: $size;
+    background-image: url($img-url);
+    background-position: 0 0 ;
+    margin-right: 4px;
+  }
+  &:checked + label:before {
+    background-position: 0 -#{$size};
+  }
+}
+
+@mixin fileUpload_TypeOne ($btn-w, $field-h) {
+  /* 自訂檔案上傳欄位及按鈕 (type one) */
+  .path {
+    display: inline-block;
+    width: 100% - $btn-w;
+    height: $field-h;
+    line-height: $field-h;
+  }
+  input[type="file"] {
+    width: 0;
+    opacity: 0;
+  }
+  input[type="file"] + label {
+    width: $btn-w;
+    height: $field-h;
+    line-height: $field-h;
+    text-align: center;
+  }
+}
+
+
+@mixin ellipsis($col:'3') {
+  display: -webkit-box;
+  -webkit-line-clamp: $col;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
